@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Happy+Monkey&family=Oswald:wght@200&family=Playfair+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header starts */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.header .foodblog {
+  font-size: 30px;
+  margin-left: 15px;
+  font-family: "Dancing Script", cursive;
+}
+.header .recipes {
+  display: flex;
+  gap: 10px;
+  margin-right: 18px;
+}
+.header .recipes a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+.header .recipes a:hover {
+  background-color: greenyellow;
+}
+
+/* header ends */
+/* navbar starts */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+.navbar a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+.navbar a:hover {
+  background-color: rgba(207, 51, 51, 0.507);
+  cursor: pointer;
+}
+
+/* navbar ends */
+/* main content home page starts */
+.foodpics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px auto;
+  padding: 0 200px;
+}
+.foodpics div {
+  width: 350px;
+  height: 220px;
+  position: relative;
+  box-shadow: 4px 4px 10px rgb(154, 154, 154);
+  border-radius: 10px;
+}
+.foodpics div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  border-radius: 10px;
+}
+.foodpics div p {
+  position: absolute;
+  bottom: -26.5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  color: white;
+  padding: 10px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* main content home page ends */
+/* main content recipe of month starts */
+.recipe {
+  margin-left: 250px;
+  padding-top: 20px;
+}
+.recipe h3 {
+  font-style: italic;
+}
+.recipe h1 {
+  font-size: 60px;
+}
+
+.cover {
+  text-align: center;
+  background-color: rgba(153, 205, 50, 0.707);
+  position: relative;
+}
+.cover p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 68px 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 40px;
+}
+.cover p:hover {
+  background-color: rgba(0, 0, 0, 0.551);
+}
+.cover .lasagnepics {
+  display: flex;
+  gap: 120px;
+  width: 100%;
+  height: 190px;
+  position: relative;
+  justify-content: center;
+}
+.cover .lasagnepics img {
+  width: 370px;
+  height: 100%;
+  padding: 10px 10px;
+}
+
+.ingredients ul, .tips ul {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  margin-right: 20rem;
+  list-style-type: circle;
+  line-height: 28px;
+}
+.ingredients ul p, .tips ul p {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 0.7rem;
+}
+.ingredients ul li, .tips ul li {
+  font-size: 17px;
+}
+
+.directions ol {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  margin-right: 20rem;
+  line-height: 28px;
+}
+.directions ol p {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 0.7rem;
+}
+.directions ol li {
+  font-size: 17px;
+}
+
+.tips {
+  padding-bottom: 15px;
+}
+
+/* main content recipe of month ends */
+/* footer starts */
+footer {
+  margin-top: auto;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  padding: 7px 0;
+}
+.footer div {
+  display: flex;
+}
+.footer .firstrow {
+  gap: 20px;
+  padding: 5px 30px;
+  justify-content: space-around;
+  color: white;
+  margin: 0 250px;
+}
+.footer .firstrow a {
+  border-radius: 20px;
+  padding: 5px 50px;
+}
+.footer .firstrow a:hover {
+  background-color: white;
+  color: black;
+}
+.footer .secondrow {
+  gap: 0;
+  justify-content: space-around;
+  padding: 15px 30px;
+  margin: 0 630px;
+}
+.footer a, .footer p {
+  color: white;
+  text-decoration: none;
+}
+
+/* footer ends */
+/* media queries */
+@media screen and (width < 480px) {
+  .foodpics {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    padding: 0 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .foodpics {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 0 20px;
+  }
+}
+/* tablet breaking point found on page https://www.lambdatest.com/blog/how-to-use-css-breakpoints-for-responsive-design/#:~:text=481px%20%E2%80%94%20768px%3A%20CSS%20tablet%20breakpoints%20(iPads%2C%20Tablets) *//*# sourceMappingURL=style.css.map */
